@@ -43,4 +43,4 @@ rm -rf chrome-unstable
 rm /opt/chrome.tar.lzma
  
 env-update
-restart ui
+#restart ui

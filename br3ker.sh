@@ -28,8 +28,9 @@ mkdir -p /usr/lib/mozilla/plugins/
 echo "Downloading Google Chrome"
 curl -z "/opt/chrome-bin.deb" -o "/opt/chrome-bin.deb" -L $CHROME
 
-#python /opt/deb2tar.py /opt/chrome-bin.deb /opt/chrome.tar.lzma
-python /opt/deb2tar.py /opt/chrome-bin.deb /opt/data.tar.lzma
+rename /opt/data.tar.lzma /opt/chrome.tar.lzma
+
+python /opt/deb2tar.py /opt/chrome-bin.deb /opt/chrome.tar.lzma
 
 rm -rf chrome-unstable
 mkdir chrome-unstable
